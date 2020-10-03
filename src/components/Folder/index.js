@@ -64,7 +64,10 @@ export default class Folder extends React.Component {
         ReactDOM.createPortal(
           <FolderWindow
             name={this.props.name}
-            close={() => this.setState({opened: false})} />
+            close={() => this.setState({opened: false})}
+          >
+            {this.props.children}
+          </FolderWindow>
           , document.getElementById("App"))}
     </>
 }

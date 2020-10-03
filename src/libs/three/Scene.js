@@ -55,6 +55,7 @@ export default class Scene extends transitionHandler {
     this.scene.controls = new OrbitControls(this.scene.camera, this.scene.renderer.domElement)
     this.scene.controls.enabled = false
     this.scene.camera.position.z = targetToCamera
+    this.scene.camera.position.y = -targetToCamera / 2
     this.scene.controls.update()
 
     // this.scene.composer = new EffectComposer(this.scene.renderer)
