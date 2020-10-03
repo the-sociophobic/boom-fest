@@ -1,0 +1,194 @@
+@import '~bootstrap/scss/bootstrap.scss'
+@import './variables.css'
+  
+
+$font-color: black
+$background-color: white
+
+$folder-border-width: 2px
+
+$header-height: 25px
+
+
+$breakpoint-1024: 1024px
+  
+
+::-webkit-scrollbar
+  width: 0
+  height: 0
+
+
+.desktop-only
+  @media screen and ( max-width: $breakpoint-1024 )
+    display: none
+.mobile-only
+  @media screen and ( min-width: $breakpoint-1024 + 1px)
+    display: none
+
+.noselect
+  -webkit-touch-callout: none;  /* iOS Safari */
+  -webkit-user-select: none;    /* Safari */
+  -khtml-user-select: none;     /* Konqueror HTML */
+  -moz-user-select: none;       /* Firefox */
+  -ms-user-select: none;        /* Internet Explorer/Edge */
+  user-select: none;            /* Non-prefixed version, currently supported by Chrome and Opera */
+
+.button
+  padding: 0
+  cursor: pointer
+  outline: none
+  border: none
+  background-color: rgba(0, 0, 0, 0)
+
+h1, h2, h3, h4, h5, h6
+  font-weight: 700
+
+*
+  color: $font-color
+  margin: 0
+  box-sizing: border-box
+  @extend .noselect
+  cursor: url(./img/pointer.svg) 12 10, auto !important
+
+
+.App
+  width: 100%
+  height: 100%
+  overflow-y: hidden
+  background: $background-color
+  @extend .d-flex
+  @extend .flex-column
+  // @extend .justify-content-around
+
+
+.header
+  width: 100%
+  // height: $header-height
+  padding: $header-height * .1 0
+  font-size: $header-height / 1.5
+  box-sizing: content-box
+  border-bottom: $folder-border-width solid $font-color
+  @extend .d-flex
+  @extend .flex-row
+  @extend .justify-content-between
+  @extend .align-items-center
+  &__left-icons,
+  &__right-icons
+    @extend .d-flex
+    @extend .flex-row
+    &__item
+      width: $header-height
+      height: $header-height * .8
+      background-position: center
+      background-repeat: no-repeat
+      background-size: 90%
+      margin: 0 $header-height * .3
+      &--text
+        width: auto
+        line-height: $header-height * .8
+      &--battery-percentage
+        margin-right: 0
+      &--greenfrog
+        background-image: url(./img/greenfrog.png)
+        margin: 0 $header-height * .7
+      &--battery-25
+        margin-left: $header-height * .2
+        background-image: url(./img/battery.25.svg)
+        width: $header-height * 1.4
+      &--folder-fill
+        background-image: url(./img/folder.fill.svg)
+      &--folder
+        background-image: url(./img/folder.svg)
+      &--magnifyingglass
+        background-image: url(./img/magnifyingglass.svg)
+        width: $header-height * .75
+      &--wifi
+        background-image: url(./img/wifi.svg)
+
+  
+.desktop
+  flex-grow: 1
+  overflow: auto
+  @extend .d-flex
+  @extend .flex-column
+  @extend .align-content-start
+  @extend .flex-wrap-reverse
+
+
+.Viewer
+  width: 100%
+  height: 55vh
+  @extend .noselect
+  outline: none
+  *
+    @extend .noselect
+    outline: none
+
+  
+
+.folder-icon
+  position: relative
+  width: $header-height * 5
+  height: $header-height * 5
+  &--selected
+  &__icon, &__name
+    cursor: url(./img/pointinghand.svg) 12 10, auto !important
+    position: absolute
+    left: 50%
+  &__icon
+    top: 50%
+    width: 35%
+    height: 35%
+    transform: translate(-50%, -50%)
+    background-position: center
+    background-repeat: no-repeat
+    background-size: 100%
+    background-image: url(./img/folder.svg)
+  &--selected &__icon
+    background-image: url(./img/folder.fill.svg)
+  &__name
+    bottom: 10%
+    transform: translateX(-50%)
+    white-space: nowrap
+    padding: 0 .25em
+  &--selected &__name
+    color: $background-color
+    background-color: $font-color
+
+
+
+.folder-window
+  width: 50%
+  height: 50%
+  position: fixed
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  background: $background-color
+  border: $folder-border-width solid $font-color
+  &__header
+    position: relative
+    width: 100%
+    height: $header-height
+    border-bottom: $folder-border-width solid $font-color
+    box-sizing: content-box
+    &__buttons
+      width: $header-height * 3
+      height: $header-height
+      @extend .d-flex
+      @extend .flex-row
+      @extend .justify-content-around
+      @extend .align-items-center
+      &__item
+        width: $header-height * .6
+        height: $header-height * .6
+        border-radius: $header-height
+        border: $folder-border-width solid $font-color
+        &--close
+          background-color: red
+    &__name
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+  &__content
