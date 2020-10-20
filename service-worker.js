@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/boom-fest/precache-manifest.a65bd0ab970dc63a609602bcf74d5084.js"
+  "/boom-fest/precache-manifest.1b085668b10832aa80bd3a8f3c838b3d.js"
 );
 
 self.addEventListener('message', (event) => {
