@@ -33,6 +33,14 @@ export default class Model extends Unit {
     this.gtlf = await modelLoader(this.props.file)
     this.model = this.gtlf.scene
 
+    this.mixer = new THREE.AnimationMixer( this.gtlf.scene )
+    this.actions = []
+    this.gtlf.animations.forEach((animation, index) => {
+      this.actions.push( this.mixer.clipAction( animation ) )
+      this.actions[index].play()
+    })
+
+
     this.model.scale.set(7.5, 7.5, 7.5)
     this.model.position.set(0, -7.5, 0)
 
@@ -46,6 +54,8 @@ export default class Model extends Unit {
     let alpha = props.frameNumber / props.maxFrameNumber * 7
 
     this.model && (this.model.rotation.y = alpha * 2 * Math.PI)
+
+    this.mixer && this.mixer.update(props.clock.getDelta())
   }
   dispose = props => {}
 }

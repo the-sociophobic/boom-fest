@@ -30,7 +30,7 @@ export default class extends React.Component {
 
   updateStatus = () =>
     this.setState({
-      status: `${secondsParse(this.audioFile.currentTime)}/${secondsParse(this.audioFile.duration)}`
+      status: `${secondsParse(this.audioFile.currentTime)} / ${secondsParse(this.audioFile.duration)}`
     })
 
   render = () =>

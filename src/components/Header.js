@@ -52,7 +52,7 @@ export default class Header extends React.Component {
           {icons[3]}
           <div
             onClick={this.props.fullScreenToggler}
-            className="header__right-icons__item header__right-icons__item--text"
+            className="header__right-icons__item header__right-icons__item--text header__right-icons__item header__right-icons__item--fullscreen"
           >
             Фулскрин
           </div>
