@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/boom-fest/static/css/main.9b5ad8a8.chunk.css",
-    "main.js": "/boom-fest/static/js/main.33e42174.chunk.js",
-    "main.js.map": "/boom-fest/static/js/main.33e42174.chunk.js.map",
+    "main.css": "/boom-fest/static/css/main.1ab9f260.chunk.css",
+    "main.js": "/boom-fest/static/js/main.0ab76882.chunk.js",
+    "main.js.map": "/boom-fest/static/js/main.0ab76882.chunk.js.map",
     "runtime-main.js": "/boom-fest/static/js/runtime-main.59399724.js",
     "runtime-main.js.map": "/boom-fest/static/js/runtime-main.59399724.js.map",
     "static/js/2.d1078b55.chunk.js": "/boom-fest/static/js/2.d1078b55.chunk.js",
     "static/js/2.d1078b55.chunk.js.map": "/boom-fest/static/js/2.d1078b55.chunk.js.map",
     "index.html": "/boom-fest/index.html",
-    "precache-manifest.6ecffc3d46d9f0069b9144a13c0ac0c4.js": "/boom-fest/precache-manifest.6ecffc3d46d9f0069b9144a13c0ac0c4.js",
+    "precache-manifest.e50f0a2c603152d7a28cb8cf0a028980.js": "/boom-fest/precache-manifest.e50f0a2c603152d7a28cb8cf0a028980.js",
     "service-worker.js": "/boom-fest/service-worker.js",
-    "static/css/main.9b5ad8a8.chunk.css.map": "/boom-fest/static/css/main.9b5ad8a8.chunk.css.map",
+    "static/css/main.1ab9f260.chunk.css.map": "/boom-fest/static/css/main.1ab9f260.chunk.css.map",
     "static/js/2.d1078b55.chunk.js.LICENSE.txt": "/boom-fest/static/js/2.d1078b55.chunk.js.LICENSE.txt",
     "static/media/Fedya.mp3": "/boom-fest/static/media/Fedya.1672a261.mp3",
     "static/media/Fedya.glb": "/boom-fest/static/media/Fedya.546ed2c9.glb",
@@ -20,7 +20,7 @@
     "static/media/Ilya.mp3": "/boom-fest/static/media/Ilya.eda2eb49.mp3",
     "static/media/Kira.png": "/boom-fest/static/media/Kira.0896bacb.png",
     "static/media/Kira.glb": "/boom-fest/static/media/Kira.24733a11.glb",
-    "static/media/Kira.mp3": "/boom-fest/static/media/Kira.b38718e6.mp3",
+    "static/media/Kira.mp3": "/boom-fest/static/media/Kira.6ab9ee94.mp3",
     "static/media/Mark.mp3": "/boom-fest/static/media/Mark.76df59b7.mp3",
     "static/media/Mark.glb": "/boom-fest/static/media/Mark.9b246715.glb",
     "static/media/Mark.png": "/boom-fest/static/media/Mark.afe4e615.png",
@@ -32,7 +32,7 @@
   "entrypoints": [
     "static/js/runtime-main.59399724.js",
     "static/js/2.d1078b55.chunk.js",
-    "static/css/main.9b5ad8a8.chunk.css",
-    "static/js/main.33e42174.chunk.js"
+    "static/css/main.1ab9f260.chunk.css",
+    "static/js/main.0ab76882.chunk.js"
   ]
 }
